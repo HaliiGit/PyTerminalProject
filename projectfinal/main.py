@@ -25,8 +25,8 @@ while pokracovat:
             print("Prosím zadejte číslo.")
 
     if volba == 1:
-        jmeno = input("Zadejte jméno pojištěného: \n")
-        prijmeni = input("Zadejte příjmení: \n")
+        jmeno = input("Zadejte jméno pojištěného: \n").strip().title()
+        prijmeni = input("Zadejte příjmení: \n").strip().title()
         tel = input("Zadejte telefonní číslo: \n")
         vek = input("Zadejte věk: \n")
         pojistitel = Insured(jmeno, prijmeni, tel, vek)
@@ -40,8 +40,8 @@ while pokracovat:
         input()
         doplnky.clear_screen()
     elif volba == 3:
-        jmeno = input("Zadejte jméno pojištěného: \n")
-        prijmeni = input("Zadejte příjmení pojištěného: \n")
+        jmeno = input("Zadejte jméno pojištěného: \n").strip().title()
+        prijmeni = input("Zadejte příjmení pojištěného: \n").strip().title()
         insured_finder = Insured(jmeno, prijmeni, "", "")
         evidence.id_finder(insured_finder)
         if evidence.id_finder(insured_finder) == None:

@@ -15,7 +15,7 @@ class InsuranceRecords:
     def reader(self):
         output = ""
         for index, insured_data in self.database.items():
-            name = insured_data['name'].ljust(12)
+            name = insured_data['name'].ljust(6)
             surname = insured_data['surname'].ljust(12)
             age = insured_data['age'].ljust(15)
             tel = insured_data['tel']
@@ -25,5 +25,5 @@ class InsuranceRecords:
     def id_finder(self, insured):
         for id, insured_data in self.database.items():
             if insured_data['name'] == insured.name and insured_data['surname'] == insured.surname:
-                return f"{self.database[id]['name'].ljust(12)}{self.database[id]['surname'].ljust(12)}{self.database[id]['age'].ljust(15)}{self.database[id]['tel']}"
+                return f"{self.database[id]['name'].ljust(6)}{self.database[id]['surname'].ljust(12)}{self.database[id]['age'].ljust(15)}{self.database[id]['tel']}"
         return None

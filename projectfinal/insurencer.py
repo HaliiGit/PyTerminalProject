@@ -5,4 +5,4 @@ class Insured:
         self.tel = tel
         self.age = age
     def __str__(self):
-        return f"{self.name.ljust(12)}{self.surname.ljust(12)}{self.age.ljust(15)}{self.tel}"
+        return f"{self.name.ljust(6)}{self.surname.ljust(12)}{self.age.ljust(15)}{self.tel}"
